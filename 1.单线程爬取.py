@@ -78,7 +78,7 @@ class GSM(object):
         pass
 
     def run(self):
-        s = time.time()
+
         for url  in self.getUrls():
 
             html = self.getContent(url)
@@ -91,7 +91,7 @@ class GSM(object):
         # title =html[0]
         # content =html[1]
         # self.download(title,content)
-        print(f'总共用时：{time.time() - s}')
+
 
 
         pass
@@ -99,4 +99,7 @@ if __name__ == '__main__':
     url = 'https://www.gushimi.org/shiren/5.html'
     # content = 'https://www.gushimi.org/gushi/5342.html'
     gsm = GSM(url)
+    st = time.time()
     gsm.run()
+    et = time.time()
+    print(f'总共用时：{et-st}')
